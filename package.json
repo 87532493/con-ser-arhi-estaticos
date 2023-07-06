@@ -4,6 +4,11 @@
   "main": "index.js",
   "author": "miguel chamorro",
   "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
   "devDependencies": {
     "nodemon": "^2.0.22"
   }
