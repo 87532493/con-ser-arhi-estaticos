@@ -1,8 +1,11 @@
+require ("dotenv").config()
 const http = require ("http")
-const { CLIENT_RENEG_LIMIT } = require("tls")
 function requestController(){
-   console.log("recibimos una nueva request")
+   console.log("HOLA MUNDO")
 }
 //configurar nuestro servidor
-const server =http.createServer(requestController)
-server.listen(4000) 
+const server = http.createServer(requestController)
+const PORT = process.env.PORT
+server.listen(PORT, function(){
+   console.log("APLICACION CORRIENDO EN PUERTO:"+ PORT)
+}) 
